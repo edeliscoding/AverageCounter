@@ -241,7 +241,52 @@
 
     <br />
     <div>Your average score is: <span id="score"></span></div>
-
+<form name="finalselection">
+    <form>
+      <p>Your final average</p>
+      <input
+        type="radio"
+        class="finalquestion"
+        name="final"
+        onchange=""
+        value=""
+      />1
+      <input
+        type="radio"
+        class="finalquestion"
+        name="final"
+        onchange=""
+        value=""
+      />2
+      <input
+        type="radio"
+        class="finalquestion"
+        name="final"
+        onchange=""
+        value=""
+      />3
+      <input
+        type="radio"
+        class="finalquestion"
+        name="final"
+        onchange=""
+        value=""
+      />4
+      <input
+        type="radio"
+        class="finalquestion"
+        name="final"
+        onchange=""
+        value=""
+      />5
+      <input
+        type="radio"
+        class="finalquestion"
+        name="final"
+        onchange=""
+        value=""
+      />6
+</form>
     <br />
     <br />
     <script>
@@ -259,6 +304,9 @@
               totalAverage
             );
             var answer = document.getElementById("score").innerHTML;
+            document.finalselection.final[answer - 1].checked=true;
+            // var finalRadio = document.querySelectorAll('input[name="final"]');
+            // finalRadio.innerText.checked=answer;
           };
         });
       }
