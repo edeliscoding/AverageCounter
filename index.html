@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <form>
+      <p>Question here</p>
+      <input
+        type="radio"
+        class="check"
+        name="choose"
+        onchange="getAverage()"
+        value="1"
+      />1
+      <input
+        type="radio"
+        class="check"
+        name="choose"
+        onchange="getAverage()"
+        value="2"
+      />2
+      <input
+        type="radio"
+        class="check"
+        name="choose"
+        onchange="getAverage()"
+        value="3"
+      />3
+      <input
+        type="radio"
+        class="check"
+        name="choose"
+        onchange="getAverage()"
+        value="4"
+      />4
+      <input
+        type="radio"
+        class="check"
+        name="choose"
+        onchange="getAverage()"
+        value="5"
+      />5
+      <input
+        type="radio"
+        class="check"
+        name="choose"
+        onchange="getAverage()"
+        value="6"
+      />6
+      <br />
+    </form>
+    <form>
+      <p>Question here</p>
+      <input
+        type="radio"
+        class="check"
+        name="choose"
+        onchange="getAverage()"
+        value="1"
+      />1
+      <input
+        type="radio"
+        class="check"
+        name="choose"
+        onchange="getAverage()"
+        value="2"
+      />2
+      <input
+        type="radio"
+        class="check"
+        name="choose"
+        onchange="getAverage()"
+        value="3"
+      />3
+      <input
+        type="radio"
+        class="check"
+        name="choose"
+        onchange="getAverage()"
+        value="4"
+      />4
+      <input
+        type="radio"
+        class="check"
+        name="choose"
+        onchange="getAverage()"
+        value="5"
+      />5
+      <input
+        type="radio"
+        class="check"
+        name="choose"
+        onchange="getAverage()"
+        value="6"
+      />6
+      <br />
+    </form>
+    <form>
+      <p>Question here</p>
+      <input
+        type="radio"
+        class="check"
+        name="choose"
+        onchange="getAverage()"
+        value="1"
+      />1
+      <input
+        type="radio"
+        class="check"
+        name="choose"
+        onchange="getAverage()"
+        value="2"
+      />2
+      <input
+        type="radio"
+        class="check"
+        name="choose"
+        onchange="getAverage()"
+        value="3"
+      />3
+      <input
+        type="radio"
+        class="check"
+        name="choose"
+        onchange="getAverage()"
+        value="4"
+      />4
+      <input
+        type="radio"
+        class="check"
+        name="choose"
+        onchange="getAverage()"
+        value="5"
+      />5
+      <input
+        type="radio"
+        class="check"
+        name="choose"
+        onchange="getAverage()"
+        value="6"
+      />6
+      <br />
+    </form>
+    <form>
+      <p>Question here</p>
+      <input
+        type="radio"
+        class="check"
+        name="choose"
+        onchange="getAverage()"
+        value="1"
+      />1
+      <input
+        type="radio"
+        class="check"
+        name="choose"
+        onchange="getAverage()"
+        value="2"
+      />2
+      <input
+        type="radio"
+        class="check"
+        name="choose"
+        onchange="getAverage()"
+        value="3"
+      />3
+      <input
+        type="radio"
+        class="check"
+        name="choose"
+        onchange="getAverage()"
+        value="4"
+      />4
+      <input
+        type="radio"
+        class="check"
+        name="choose"
+        onchange="getAverage()"
+        value="5"
+      />5
+      <input
+        type="radio"
+        class="check"
+        name="choose"
+        onchange="getAverage()"
+        value="6"
+      />6
+      <br />
+    </form>
+    <form>
+      <p>Question here</p>
+      <input
+        type="radio"
+        class="check"
+        name="choose"
+        onchange="getAverage()"
+        value="1"
+      />1
+      <input
+        type="radio"
+        class="check"
+        name="choose"
+        onchange="getAverage()"
+        value="2"
+      />2
+      <input
+        type="radio"
+        class="check"
+        name="choose"
+        onchange="getAverage()"
+        value="3"
+      />3
+      <input
+        type="radio"
+        class="check"
+        name="choose"
+        onchange="getAverage()"
+        value="4"
+      />4
+      <input
+        type="radio"
+        class="check"
+        name="choose"
+        onchange="getAverage()"
+        value="5"
+      />5
+      <input
+        type="radio"
+        class="check"
+        name="choose"
+        onchange="getAverage()"
+        value="6"
+      />6
+      <br />
+    </form>
+
+    <br />
+    <div>Your average score is: <span id="score"></span></div>
+
+    <br />
+    <br />
+    <script>
+      function getAverage() {
+        var btns = document.querySelectorAll('input[name="choose"]');
+        btns.forEach(function(btn) {
+          btn.onclick = function() {
+            var average = 0;
+            btns.forEach(function(btn) {
+              average = btn.checked ? average + parseInt(btn.value) : average;
+            });
+            var count = document.querySelectorAll(".check:checked").length;
+            var totalAverage = average / count;
+            document.getElementById("score").innerText = Math.round(
+              totalAverage
+            );
+          };
+        });
+      }
+    </script>
+  </body>
+</html>
